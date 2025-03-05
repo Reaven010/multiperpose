@@ -1,0 +1,95 @@
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+/* Background video */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Wrapper to allow scrolling effect */
+.wrapper {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Scroll-down indicator */
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    font-size: 18px;
+    opacity: 0.7;
+    animation: fadeIn 2s infinite alternate;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Categories */
+main {
+    position: relative;
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(5px);
+    padding: 50px 0;
+    margin-top: 100vh;
+}
+
+.category {
+    margin: 50px auto;
+    padding: 20px;
+    background: transparent;
+    border-radius: 15px;
+    width: 60%;
+    transition: transform 0.3s ease;
+}
+
+.category:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    font-size: 28px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Image links */
+a img {
+    width: auto;
+    height: 225px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+a img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer */
+footer {
+    position: relative;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    font-size: 14px;
+    opacity: 0.8;
+}
